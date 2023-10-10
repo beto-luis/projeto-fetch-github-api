@@ -1,4 +1,5 @@
-import { baseUrl, repositoriesQuantities } from "./variables.js"
+import { user } from '/src/scripts/services/user.js'
+import { repositories } from '/src/scripts/services/repositories.js'
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
@@ -14,16 +15,6 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
         getUserProfile(userName)
     }
 })
-
-async function user(userName){
-    const response = await fetch(`${baseUrl}/${userName}`)
-    return await response.json()
-}
-
-async function repos(userName){
-    const response = await fetch(`${baseUrl}/${userName}/repos?per_page=${repositoriesQuantities}`)
-    return await response.json()
-}
 
 function getUserProfile(userName){
     user(userName).then(userData => {
@@ -42,7 +33,7 @@ function getUserProfile(userName){
 }
 
 function getUserRepositories(userName) {
-    repos(userName).then(reposData => {
+    repositories(userName).then(reposData => {
         let repositoriesItens = ""
 
         reposData.forEach(repo => {
