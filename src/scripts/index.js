@@ -7,6 +7,10 @@ import { screen } from '/src/scripts/objects/screen.js'
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
+    // if(userName.lenght === 0){
+    //     alert('Preencha o campo com o nome do usuário do GitHub')
+    //     return 
+    // }
     getUserProfile(userName)
 })
 
