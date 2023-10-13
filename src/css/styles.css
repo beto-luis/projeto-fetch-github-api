@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color:#24292e;
+  background: linear-gradient(90deg, rgba(61,16,231,1) 0%, rgba(135,18,233,1) 50%, rgba(163,38,232,1) 100%);
   font-family: "Kumbh Sans", sans-serif;  
   text-align: center;    
   padding-bottom: 100px;
@@ -80,7 +80,7 @@ main {
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
+  background-color: rgb(148, 36, 223);
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -106,7 +106,7 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid rgb(148, 36, 223);
 }
 
 .container .profile-data .info h1{
