@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.github.com/users'
+const repositoriesQuantity = 10
+const activityQuantity = 15
 
-const repositoriesQuantities = 10
-
-export {baseUrl, repositoriesQuantities}
+export {baseUrl, repositoriesQuantity, activityQuantity}
